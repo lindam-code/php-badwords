@@ -6,7 +6,11 @@
   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
   mollit anim id est laborum.';
-  echo $testo;
-  echo ' Lunghezza del lorem ipsum : ' . strlen($testo) . ' caratteri.';
-
+  $testo_badword = str_replace($_GET["badword"], '***', $testo);
 ?>
+
+<h1>Testo</h1>
+<p><?php echo $testo ?></p>
+<span> <?php echo ' Lunghezza del lorem ipsum : ' . strlen($testo) . ' caratteri.' ?></span>
+<h2>Testo con le badwords</h2>
+<p><?php echo $testo_badword ?></p>
